@@ -1,6 +1,8 @@
 import React from 'react';
 import Api from '../../api/api'
 
+
+
 const Cadastro =(props) =>{
     const history = props.history;
 

@@ -10,7 +10,7 @@ const List = () =>{
     }, [])
 
    const getTarefas = async () =>{
-       const response = await Api.fetchGetAll();
+       const response = await Api.fetchGet();
        const data = await response.json();
        setTarefas(data)
    }

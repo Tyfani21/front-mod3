@@ -1,27 +1,30 @@
 const Api = {
-    apiUrl: 'http://localhost:3001/',
-    fetchGetAll: () =>fetch(Api.apiUrl),
-    fetchGetById: id => fetch(`${Api.apiUrl}/${id}`),
-    fetchPost: (tarefa) => {
-        return fetch(Api.apiUrl,{
-            method: 'POST',
-            headers: new Headers({"Content-Type":"application/json"}),
-            body: JSON.stringify(tarefa)
-        })},
-
-    fetchPut: (tarefa, id) => {
-        return fetch(`${Api.apiUrl}/${id}`,
-            {
-            method: 'PUT',
-            headers: new Headers({"Content-Type":"application/json"}),
-            body: JSON.stringify(tarefa)
-            })},
-
+    url: 'http://localhost:3001/tarefas',
+    fetchGet: () =>  fetch(Api.url),
+    fetchGetById: (id) => fetch(Api.url + '/FindById/' + id),
+    fetchPost: (body) => {
+      return fetch(Api.url + '/add', {
+        method: 'POST',
+        headers: new Headers({
+          "Content-type": "application/json"
+        }),
+        body: JSON.stringify(body)
+      })
+    },
+    fetchPut: (body, id) => {
+      return fetch(Api.url + '/update/' + id, {
+        method: 'PUT',
+        headers: new Headers({
+          "Content-type": "application/json"
+        }),
+        body: JSON.stringify(body)
+      })
+    },
     fetchDelete: (id) => {
-        return fetch(`${Api.apiUrl}/${id}`,{
-            method: 'DELETE'
-        })
+      return fetch(Api.url + '/delete/' + id, {
+        method: 'DELETE'
+      })
     }
-}
+  }
 
-export default Api;
+  export default Api

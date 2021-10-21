@@ -14,7 +14,7 @@ const View = (props)=>{
 
     useEffect(() => {
         getTarefaById()
-    }, []);
+    },[]);
     const getTarefaById = async () => {
         const response = await Api.fetchGetById(_id);
         const result = await response.json();
