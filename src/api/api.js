@@ -1,5 +1,5 @@
 const Api = {
-    apiUrl: 'localhost:3001/',
+    apiUrl: 'http://localhost:3001/',
     fetchGetAll: () =>fetch(Api.apiUrl),
     fetchGetById: id => fetch(`${Api.apiUrl}/${id}`),
     fetchPost: (tarefa) => {
@@ -10,7 +10,8 @@ const Api = {
         })},
 
     fetchPut: (tarefa, id) => {
-        return fetch(Api.apiUrl,{
+        return fetch(`${Api.apiUrl}/${id}`,
+            {
             method: 'PUT',
             headers: new Headers({"Content-Type":"application/json"}),
             body: JSON.stringify(tarefa)
