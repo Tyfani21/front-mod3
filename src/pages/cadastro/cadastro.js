@@ -61,9 +61,9 @@ const Cadastro =(props) =>{
            <div className='col'>
             <div className="input-group-1">
                 <select name='status'className="input-group-status" placeholder="Selecione um status">
-                <option value="fazer">Fazer</option>
-                <option value="fazendo">Fazendo</option>
-                <option value="feito">Feito</option>
+                <option value="Fazer">Fazer</option>
+                <option value="Fazendo">Fazendo</option>
+                <option value="Feito">Feito</option>
                 </select>
                 
                 <label htmlFor='floatingstatus'>Status</label>
@@ -72,9 +72,9 @@ const Cadastro =(props) =>{
            <div className='col'>
             <div className="input-group-1" id='floatingcor'>
                 <select name='etiqueta'className="input-group-target" placeholder="Selecione uma etiqueta">
-                <option id="color-r"value="red"></option>
-                <option id="color-y" value="yellow"></option>
-                <option id="color-p" value="pink"></option>
+                <option id="color-r"value="Vermelho"></option>
+                <option id="color-y" value="Amarelo"></option>
+                <option id="color-p" value="Rosa"></option>
                 </select>
                 
                 <label htmlFor='floatingcor'>Etiqueta</label>
@@ -89,9 +89,9 @@ const Cadastro =(props) =>{
            <div className='col'>
             <div className="input-group-1">
                 <select name='prioridade'id='floatingprioridade'className="input-group-target" placeholder="Selecione uma prioridade">
-                <option value="alta">Alta</option>
-                <option value="media">Media</option>
-                <option value="baixa">Baixa</option>
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baixa">Baixa</option>
                 </select>
                 <label htmlFor='floatingprioridade'>Prioridade</label>
             </div>

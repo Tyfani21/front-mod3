@@ -1,27 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './card.css'
 const Card = (props) => {
     const tarefas = props.data;
     return(
         <Link>
-        <div>
+        <div id='card'>
             <div id='title'>
-            <p>Tarefa:{ tarefas.titulo }</p></div>
-            <div id='date'>
-            <p>Data:{ tarefas.data }</p></div>
-            <div id='descricao'>
-            <p>Descricao:{ tarefas.descricao }</p></div>
-            <div id='prioridade'>
-            <p>Prioridade:{tarefas.prioridade}</p></div>
-            <div id='status'>
-            <p>Status:{tarefas.status}</p></div>
-            <div id='prazo'>
-            <p>Prazo:{tarefas.prazo}</p></div>
-            
+            <p>Tarefa:<span>{ tarefas.titulo }</span></p></div>
+            <div id='text-group'>
+            <p>Data:<span>{ tarefas.data }</span></p></div>
+            <div id='text-group'>
+            <p>Descricao:<span>{ tarefas.descricao }</span></p></div>
+            <div id='text-group'>
+            <p>Prioridade:<span>{tarefas.prioridade}</span></p></div>
+            <div id='text-group'>
+            <p>Status:<span>{tarefas.status}</span></p></div>
+            <div id='text-group'>
+            <p>Prazo:<span>{tarefas.prazo}</span></p></div>
+            <div id='text-group'>
+                <p>Etiqueta:<span>{tarefas.etiqueta}</span></p>
+            </div>
         </div>
         </Link>
     )
 }
+
 
 export default Card;

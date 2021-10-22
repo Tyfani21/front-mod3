@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#card{
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+    border: 0.1rem solid pink;
+    text-decoration: none;
+    background-color: rgba(255, 242, 245, 0.74);
+    margin: 1rem;
+}
+#title{
+    text-align: center;
+    border-bottom:.1rem solid red ;
+    text-decoration: none;
+}
+#text-group{
+    color: black;
+    text-decoration: none;
+    text-align:left ;
+    padding: .2rem;
+    text-decoration-line: none;
+}
+span{
+    padding: .2rem;
+    text-decoration: none;
+}
