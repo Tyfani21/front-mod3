@@ -1,7 +1,7 @@
 const Api = {
     url: 'http://localhost:3001/tarefas',
     fetchGet: () =>  fetch(Api.url),
-    fetchGetById: (id) => fetch(Api.url + '/FindById/' + id),
+    fetchGetById: (id) => fetch(Api.url + '/view/' + id),
     fetchPost: (body) => {
       return fetch(Api.url + '/add', {
         method: 'POST',
@@ -12,7 +12,7 @@ const Api = {
       })
     },
     fetchPut: (body, id) => {
-      return fetch(Api.url + '/update/' + id, {
+      return fetch(Api.url + '/edit/' + id, {
         method: 'PUT',
         headers: new Headers({
           "Content-type": "application/json"

@@ -1,0 +1,14 @@
+#link{
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+nav{
+    background-color: #1f1f44;
+    color: white;
+    display: flex;
+    padding: .5rem;
+    width: 100%;
+    text-align: center;
+}

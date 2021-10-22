@@ -1,7 +1,15 @@
-@import './../../../style/cores.css';
 *{
     padding: 0;
     margin: 0;
+}
+#backg{
+    width: 99vw;
+    height: 50vh;
+    margin-left: 29rem;
+}
+.col{
+    background-color: transparent;
+    border: none;
 }
 #card{
     margin: 20px;

@@ -1,7 +1,7 @@
 import Card from "../Card/card";
 import Api from "../../../api/api";
 import React, {  useState, useEffect } from "react";
-
+import './list.css'
 const List = () =>{
     const [tarefas, setTarefas] = useState([]);
 
@@ -11,14 +11,14 @@ const List = () =>{
 
    const getTarefas = async () =>{
        const response = await Api.fetchGet();
-       const data = await response.json();
-       setTarefas(data)
+       const result = await response.json();
+       setTarefas(result)
    }
 
     return(
         <section>{
             tarefas.map((tarefa, index) => (
-                <Card data={tarefa} key={index}/>
+                <Card data={tarefa} key={index} />
             ))}
         </section>
     )

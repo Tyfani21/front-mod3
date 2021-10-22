@@ -37,66 +37,74 @@ const Cadastro =(props) =>{
     }
 
     return(
-        <div>
+        <div >
         <form onSubmit={handleSubmit} className="input-group">
             
-           <div className='col'>
+           <div className='col-1'>
             <label className="input-group-1">
-                <input name='titulo'className="input-group-name" placeholder="Digite um titulo para a tarefa"></input>
+                <h4>Título:</h4>
+                <input name='titulo'className="input-group-1" placeholder="Digite um titulo para a tarefa"></input>
             </label>
             </div>
             
            <div className='col'>
             <label className="input-group-2">
-                <input name='data' className="input-group-data" type="date"></input>
+                <h4>Data de hoje:</h4>
+                <input name='data' className="input-group-2" type="date"></input>
             </label>
             </div>
             
            <div className='col'>
-            <label className="input-group-1">
-                <input name='descricao'className="input-group-descricao" placeholder="Digite sua tarefa"></input>
+            <h4>Descrição:</h4>
+            <label className="input-group-3">
+                <input name='descricao'className="input-group-3" placeholder="Digite sua tarefa"></input>
             </label>
             </div>
             
            <div className='col'>
-            <div className="input-group-1">
-                <select name='status'className="input-group-status" placeholder="Selecione um status">
+               <h4>Status</h4>
+            <div className="input-group-4">
+                <select name='status'className="input-group-4" placeholder="Selecione um status">
                 <option value="Fazer">Fazer</option>
                 <option value="Fazendo">Fazendo</option>
                 <option value="Feito">Feito</option>
                 </select>
                 
-                <label htmlFor='floatingstatus'>Status</label>
+                <label htmlFor='floatingstatus'></label>
             </div>
             </div>
            <div className='col'>
-            <div className="input-group-1" id='floatingcor'>
-                <select name='etiqueta'className="input-group-target" placeholder="Selecione uma etiqueta">
-                <option id="color-r"value="Vermelho"></option>
-                <option id="color-y" value="Amarelo"></option>
-                <option id="color-p" value="Rosa"></option>
+               <h4>Etiqueta:</h4>
+            <div className="input-group-5" id='floatingcor'>
+                <select name='etiqueta'className="input-group-5" placeholder="Selecione uma etiqueta">
+                <option id="color-r"value="Vermelho">Vermelho</option>
+                <option id="color-y" value="Amarelo">Amarelo</option>
+                <option id="color-p" value="Rosa">Rosa</option>
                 </select>
                 
-                <label htmlFor='floatingcor'>Etiqueta</label>
+                <label htmlFor='floatingcor'></label>
             </div>
             </div>
             
            <div className='col'>
-            <label className="input-group-1">
-                <input name='prazo'className="input-group-prazo" type='date' placeholder="Digite um prazo"></input>
+            <label className="input-group-6">
+                <h4>Prazo:</h4>
+                <input name='prazo'className="input-group-6" type='date' placeholder="Digite um prazo"></input>
             </label>
             </div>
            <div className='col'>
-            <div className="input-group-1">
-                <select name='prioridade'id='floatingprioridade'className="input-group-target" placeholder="Selecione uma prioridade">
+            <h4>Prioridade:</h4>
+            <div className="input-group-7">
+                <select name='prioridade'id='floatingprioridade'className="input-group-7" placeholder="Selecione uma prioridade">
                 <option value="Alta">Alta</option>
                 <option value="Media">Media</option>
                 <option value="Baixa">Baixa</option>
                 </select>
-                <label htmlFor='floatingprioridade'>Prioridade</label>
+                <label htmlFor='floatingprioridade'></label>
             </div>
             </div>
-                <button type='submit' >Adicionar</button>
+            <div className='col-2'>
+                <button type='submit' >Adicionar</button></div>
     </form>
     </div>
     )
